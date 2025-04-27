@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AzureLearn | Professional eLearning Platform</title>
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2463eb">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-mortarboard-fill me-2"></i>AzureLearn
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section bg-gradient">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Advance Your Career with AzureLearn</h1>
+                    <p class="lead mb-4">Professional certification courses taught by industry experts with hands-on Azure labs.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#courses" class="btn btn-primary btn-lg px-4">Browse Courses</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://img.freepik.com/free-vector/online-certification-illustration_23-2148575636.jpg?t=st=1745755037~exp=1745758637~hmac=6076b257643649c09bbf13f8cccdd63d26c20ad374f77878b8ce9241341e68de&w=826" alt="Learning illustration" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Grid -->
+    <main class="flex-grow-1 py-5" id="courses">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="fw-bold">Featured Courses</h2>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Sort By: Newest
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Newest</a></li>
+                        <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                        <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                        <li><a class="dropdown-item" href="#">Rating</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row g-4" id="courses-container">
+                <!-- Loading Skeleton -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 skeleton-card">
+                        <div class="card-img-top skeleton-img"></div>
+                        <div class="card-body">
+                            <div class="skeleton-line w-75"></div>
+                            <div class="skeleton-line w-50"></div>
+                            <div class="skeleton-line w-25 mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat skeleton for loading state -->
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card h-100 border-0 skeleton-card">
+                        <div class="card-img-top skeleton-img"></div>
+                        <div class="card-body">
+                            <div class="skeleton-line w-75"></div>
+                            <div class="skeleton-line w-50"></div>
+                            <div class="skeleton-line w-25 mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card h-100 border-0 skeleton-card">
+                        <div class="card-img-top skeleton-img"></div>
+                        <div class="card-body">
+                            <div class="skeleton-line w-75"></div>
+                            <div class="skeleton-line w-50"></div>
+                            <div class="skeleton-line w-25 mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3">AzureLearn</h5>
+                    <p>Professional education platform powered by Microsoft Azure technologies.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-3">Learn</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Courses</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Tutorials</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Certifications</a></li>
+                        <li><a href="#" class="text-white-50">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="text-uppercase fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Blog</a></li>
+                        <li><a href="#" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="text-uppercase fw-bold mb-3">Newsletter</h6>
+                    <p>Subscribe to get updates on new courses and features.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2023 AzureLearn. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>

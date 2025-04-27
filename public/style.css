@@ -1,0 +1,110 @@
+:root {
+    --primary: #2463eb;
+    --primary-dark: #1a4fbf;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, #3a7bd5 100%);
+    color: white;
+    padding: 5rem 0;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Loading Skeletons */
+.skeleton-card {
+    background: transparent;
+}
+
+.skeleton-img {
+    height: 180px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.skeleton-line {
+    height: 1rem;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+        text-align: center;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section .d-flex {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    .card {
+        background-color: #1e1e1e;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+    
+    .skeleton-img, .skeleton-line {
+        background: linear-gradient(90deg, #2d2d2d 25%, #3d3d3d 50%, #2d2d2d 75%);
+    }
+}
